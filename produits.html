@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>NOS PRODUITS - BOUTIQUE</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      background: #fafafa;
+      text-align: center;
+      transition: transform 0.3s;
+      
+      /* Ajout pour image de fond */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .product-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.4); /* Pour lisibilité du texte */
+      border-radius: 10px;
+    }
+
+    .product-card * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .product-title {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #777;
+    }
+
+    /* Images de fond spécifiques pour chaque produit */
+    .product-card:nth-child(1) {
+      background-image: url('voiture1.jpg');
+    }
+    .product-card:nth-child(2) {
+      background-image: url('batteri1.jpg');
+    }
+    .product-card:nth-child(3) {
+      background-image: url('solar2.jpg');
+    }
+    .product-card:nth-child(4) {
+      background-image: url('porte.jpg');
+    }
+    .product-card:nth-child(5) {
+      background-image: url('orange.png');
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PRODUITS DISPONIBLES EN BOUTIQUE</h1>
+  </header>
+
+  <div class="container">
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-title">VOITURES </div>
+        <p>Des voitures et pièces de voitures – toutes marques</p>
+      </div>
+      <div class="product-card">
+        <div class="product-title">BATTERIES</div>
+        <p>Batteries de plusieurs marques et de plusieurs qualités, longue durée</p>
+      </div>
+      <div class="product-card">
+        <div class="product-title">CAPTEURS D'ENERGIE SOLAIRE</div>
+        <p>Des plaques solaires de plusieurs qualités</p>
+      </div>
+      <div class="product-card">
+        <div class="product-title">APPAREILS ÉLECTROMÉNAGERS</div>
+        <p>Les télévisions de plusieurs marques les ampoules, les prises électriques, les ventilateurs, Radios Bluetooth etc., qualité supérieure</p>
+      </div>
+      <div class="product-card">
+        <div class="product-title">GÉRANT DE POINT DE TRANSFERT</div>
+        <p>Orange Money et bien d'autres choses</p>
+      </div>
+      <!-- Tu peux ajouter d'autres produits ici -->
+    </div>
+  </div>
+
+  <button onclick="window.history.back()" style="
+    display: inline-flex;
+    align-items: center;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    display: block;
+  ">
+    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="white" style="margin-right: 8px;">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+    Retour
+  </button>
+
+  <footer>
+    &copy; 2025 Boutique SAMA ET FRERES | Tous droits réservés
+  </footer>
+</body>
+</html>
